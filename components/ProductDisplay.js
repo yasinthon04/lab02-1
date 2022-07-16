@@ -31,12 +31,12 @@ app.component ('product-display',{
                 :disabled='!inStock'
                 v-on:click="addToCart">
                 Add to Cart
-
+                </button>
+                
                 <button
                 class="button"
                 v-on:click="removeFromCart">
                 Remove
-                </button>
                 </button>
             </div>
         </div>
@@ -87,6 +87,7 @@ app.component ('product-display',{
                 return 'Free'
             }
             return 30
-    }
+        }
+
     }
 }) 
