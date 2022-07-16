@@ -32,7 +32,7 @@ app.component ('product-display',{
                 v-on:click="addToCart">
                 Add to Cart
                 </button>
-                
+
                 <button
                 class="button"
                 v-on:click="removeFromCart">
@@ -40,6 +40,7 @@ app.component ('product-display',{
                 </button>
             </div>
         </div>
+        <review-form></review-form>
     </div>`
     ,
     data() {
