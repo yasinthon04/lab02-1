@@ -40,7 +40,7 @@ app.component ('product-display',{
                 </button>
             </div>
         </div>
-        <review-form></review-form>
+        <review-form @review-submited="addReview"></review-form>
     </div>`
     ,
     data() {
@@ -56,6 +56,7 @@ app.component ('product-display',{
             ],
             activeClass: true,
             selectedVariant:0,
+            reviews:[]
 
         }
     },
@@ -71,6 +72,9 @@ app.component ('product-display',{
         },
         removeFromCart() {
             this.$emit('remove-from-cart')
+        },
+        addReview(review) {
+            this.reviews.push(review)
         }
     },
     computed: {
