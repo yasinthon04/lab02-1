@@ -1,12 +1,12 @@
 app.component ('product-display',{
-    prop:{
-        premium:{
+    props: {
+        premium: {
             type: Boolean,
             required: true
         }
     },
     template:
-    /* html */
+    /*html*/
     `<div class="product-display">
         <div class="product-container">
             <div class="product-image">
@@ -32,7 +32,6 @@ app.component ('product-display',{
                 v-on:click="addToCart">
                 Add to Cart
                 </button>
-
                 <button
                 class="button"
                 v-on:click="removeFromCart">
@@ -42,8 +41,7 @@ app.component ('product-display',{
         </div>
         <review-list v-if="reviews.length" :reviews="reviews"></review-list>
         <review-form @review-submitted="addReview"></review-form>
-    </div>`
-    ,
+    </div>`,
     data() {
         return {
             product: 'Shoes',
@@ -52,8 +50,14 @@ app.component ('product-display',{
             inventory: 100,
             details: ['50% cotton', '30% wool', '20% polyester'],
             variants: [
-                { id: 2234, color: 'green', image: './assets/images/socks_green.jpg', quantity: 50 },
-                { id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg', quantity: 50 }
+                { id: 2234, 
+                color: 'green', 
+                image: './assets/images/socks_green.jpg', 
+                quantity: 50 },
+                { id: 2235,  
+                color: 'blue', 
+                image: './assets/images/socks_blue.jpg', 
+                quantity: 50 }
             ],
             activeClass: true,
             selectedVariant:0,
@@ -94,6 +98,7 @@ app.component ('product-display',{
             }
             return 30
         }
-
     }
-}) 
+
+   
+})
